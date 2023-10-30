@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" console """
+""" Console """
 
 import cmd
 from datetime import datetime
@@ -18,7 +18,7 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
 
 
 class HBNBCommand(cmd.Cmd):
-    """ HBNH console """
+    """ This HBNH console """
     prompt = '(hbnb) '
 
     def do_EOF(self, arg):
@@ -26,7 +26,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """ overwriting the emptyline method """
+        """ Overwriting the emptyline method """
         return False
 
     def do_quit(self, arg):
@@ -34,7 +34,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def _key_value_parser(self, args):
-        """creates a dictionary from a list of strings"""
+        """Creates a dictionary from a list of strings"""
         new_dict = {}
         for arg in args:
             if "=" in arg:
